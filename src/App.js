@@ -1,5 +1,7 @@
 import React, {useState} from "react";
 import axios from "axios";
+import animation from "./asset/clouds2.json"
+import Lottie from "lottie-react"
 
 function App() {
   const [data, setData] = useState({})
@@ -21,8 +23,11 @@ function App() {
    
 
   return (
+
     <div className="App">
+      <Lottie animationData={animation} className="lottie-animation" />
       <div className="search">
+        
         <input 
         onChange={ event => setLocation(event.target.value) }
         onKeyPress={searchLocation}
@@ -30,7 +35,8 @@ function App() {
         value={location}
         type="text"/>
       </div>
-      <div className="container">
+      <div className="container" >
+     
         <div className="top">
           <div className="location">
             <p>{data.name}</p>
@@ -62,10 +68,9 @@ function App() {
           </div>
         </div>
         } 
-
       </div>
-      
-    </div>
+      </div>
+  
   );
 }
 

@@ -26,14 +26,15 @@ h1 {
 
 .App {
   width: 100%;
-  height: 100vh;
+  height: 110%;
   position: relative;
-  background-color: rgba(0,0,0,0.4);
-   color: #fff;
+  
+   overflow: hidden;
 }
+
 .App:before {
   content: '';
-  background: url('./asset/photo-1496450681664-3df85efbd29f.jpg') no-repeat center center/cover;
+  background: url('./asset/19571152.jpg') no-repeat center center/cover;
   position: absolute;
   width: 100%;
   height: 100%;
@@ -42,9 +43,24 @@ h1 {
   z-index: -1;
 }
 
+
+.lottie-animation {
+  position: absolute;
+  width: 100%;
+  height: auto;
+  top: 0;
+  left: 0;
+  z-index: -1; 
+}
+
+
+
 .search {
+ 
   text-align: center;
   padding: 1rem;
+ position: relative;
+ z-index: 1;
 }
 
  input {
@@ -87,9 +103,10 @@ h1 {
   margin: rem auto;
   padding: 1rem;
   border-radius: 12px;
-  background-color: rgb(119, 170, 230);
+  
 }
 
 .bold {
   font-weight: 700;
 }
+
